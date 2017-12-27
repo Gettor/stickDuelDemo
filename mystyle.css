@@ -1,0 +1,33 @@
+.battleArena {
+  background-color: grey;
+  display: grid;
+  grid-template-columns: 1fr 300px 500px 300px 1fr;
+  grid-template-rows: 50px 200px 100px 100px 400px auto;
+  grid-template-areas: 
+    ". .     .             .     ."
+    ". .     confirmButton .     ."
+    ". .     ph1           .     ."
+    ". .     ph2           .     ."
+    ". arena arena         arena ."
+    ". .     .             .     .";
+}
+
+.confirmButton {
+  grid-area: confirmButton;
+  background-color: blue;
+}
+
+.ph1 {
+  grid-area: ph1;
+  background-color: red;
+}
+
+.ph2 {
+  grid-area: ph2;
+  background-color: yellow;
+}
+
+.arena {
+  grid-area: arena;
+  background-color: green;
+}
