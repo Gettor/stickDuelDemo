@@ -10,17 +10,56 @@
 <body>
   <script src="myscripts.js"></script>
   <div class="battleArena">
-    <div class="confirmButton">
-      ConfirmButton
+    <div class="startDiv">
+      <div class="st1">You were challenged to a duel! By a stick man! You're a stick man as well, so it's a</div>
+      <div class="st2">STICK DUEL!</div>
+      <div class="st3"><button class="startButton" onclick="onClick()">Have at thee!</button></div>
     </div>
     <div class="ph1">
-      Attacks go here
+      <div class="a1">
+        <button id="a1" class="skill" onclick="toggleSkill('a1')"></button>
+      </div>
+      <div class="a2">
+        <button id="a2" class="skill" onclick="toggleSkill('a2')"></button>
+      </div>
+      <div class="a3">
+        <button id="a3" class="skill" onclick="toggleSkill('a3')"></button>
+      </div>
     </div>
     <div class="ph2">
-      Defences go here
+      <div class="d1">
+        <button id="d1" class="skill" disabled onclick="toggleSkill('d1')"></button>
+      </div>
+      <div class="d2">
+        <button id="d2" class="skill" disabled onclick="toggleSkill('d2')"></button>
+      </div>
+      <div class="d3">
+        <button id="d3" class="skill" disabled onclick="toggleSkill('d3')"></button>
+      </div>
     </div>
-    <div class="arena">
-      Arena goes here
+    <div class="fight">
+      <div class="myHpArea">
+        Your Health: <div id="myHpId">40</div>
+        <div class="health-bar" id="my-health-bar">
+          <div class="bar" id="my-bar">
+              <div class="hit" id="my-hit"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hisHpArea">
+        Enemy Health: <div id="enHpId">40</div>
+        <div class="health-bar" id="his-health-bar">
+          <div class="bar" id="his-bar">
+              <div class="hit" id="his-hit"></div>
+          </div>
+        </div>
+      </div>
+      <div class="verdict">
+          xxx
+      </div>
+      <div class="thisRound">
+          xxx
+      </div>
     </div>
   </div>
 </body>

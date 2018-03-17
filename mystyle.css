@@ -5,29 +5,212 @@
   grid-template-rows: 50px 200px 100px 100px 400px auto;
   grid-template-areas: 
     ". .     .             .     ."
-    ". .     confirmButton .     ."
+    ". .     startDiv      .     ."
     ". .     ph1           .     ."
     ". .     ph2           .     ."
-    ". arena arena         arena ."
+    ". fight fight         fight ."
     ". .     .             .     .";
 }
 
-.confirmButton {
-  grid-area: confirmButton;
-  background-color: blue;
+.startDiv {
+  grid-area: startDiv;
+  display: grid;
+  /*background-color: blue;*/
+  grid-template-columns: 1fr 400px 1fr;
+  grid-template-rows: 1fr 40px 30px 110px 1fr;
+  grid-template-areas: 
+  ". .   ."
+  ". st1 ."
+  ". st2 ."
+  ". st3 ."
+  ". .   ."
+}
+
+
+.st1 {
+  grid-area: st1;
+}
+
+.st2 {
+  grid-area: st2;
+}
+
+.st3 {
+  grid-area: st3;
 }
 
 .ph1 {
+  visibility: hidden;
   grid-area: ph1;
   background-color: red;
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr 50px 1fr 50px 1fr;
+  grid-template-rows: 1fr 50px 1fr;
+  grid-template-areas: 
+  ". .  . .  . .  ."
+  ". a1 . a2 . a3 ."
+  ". .  . .  . .  ."
+}
+
+.a1 {
+  grid-area: a1;
+}
+
+.a2 {
+  grid-area: a2;
+}
+
+.a3 {
+  grid-area: a3;
 }
 
 .ph2 {
+  visibility: hidden;
   grid-area: ph2;
   background-color: yellow;
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr 50px 1fr 50px 1fr;
+  grid-template-rows: 1fr 50px 1fr;
+  grid-template-areas: 
+  ". .  . .  . .  ."
+  ". d1 . d2 . d3 ."
+  ". .  . .  . .  ."
 }
 
-.arena {
-  grid-area: arena;
-  background-color: green;
+.d1 {
+  grid-area: d1;
+}
+
+.d2 {
+  grid-area: d2;
+}
+
+.d3 {
+  grid-area: d3;
+}
+
+.fight {
+    visibility: hidden;
+    grid-area: fight;
+    display: grid;
+    background-color: red;
+    grid-template-columns: 500px 100px 500px;
+    grid-template-rows: 100px 300px;
+    grid-template-areas:
+    "myHpArea  verdict   hisHpArea"
+    "thisRound thisRound thisRound"
+}
+
+.myHpArea {
+    grid-area: myHpArea;
+    background-color: #00ffff;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hisHpArea {
+    grid-area: hisHpArea;
+    background-color: #ff40ff;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.verdict {
+    grid-area: verdict;
+    background-color: #7788aa;
+}
+
+.health-bar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 200px;
+  height: 20px;
+  padding: 5px;
+  background: #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+.bar {
+  background: #c54;
+  width: 100%;
+  height: 10px;
+  position: relative;
+  
+  transition: width .5s linear;
+}
+
+.hit {
+  background: rgba(255,255,255,0.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0px;
+  
+  transition: width .5s linear;
+}
+
+
+
+
+.skill {
+  background-image: url("icons/strongAtkActive.png");
+  background-size: 50px 50px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+
+.skill[disabled]{
+  background-image: url("icons/strongAtkDisabled.png");
+  cursor: auto;
+}
+
+
+.startButton {
+  background: #76f096;
+  background-image: -webkit-linear-gradient(top, #76f096, #418a58);
+  background-image: -moz-linear-gradient(top, #76f096, #418a58);
+  background-image: -ms-linear-gradient(top, #76f096, #418a58);
+  background-image: -o-linear-gradient(top, #76f096, #418a58);
+  background-image: linear-gradient(to bottom, #76f096, #418a58);
+  -webkit-border-radius: 45;
+  -moz-border-radius: 45;
+  border-radius: 45px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 24px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.startButton:hover {
+  background: #4a8051;
+  background-image: -webkit-linear-gradient(top, #4a8051, #00d619);
+  background-image: -moz-linear-gradient(top, #4a8051, #00d619);
+  background-image: -ms-linear-gradient(top, #4a8051, #00d619);
+  background-image: -o-linear-gradient(top, #4a8051, #00d619);
+  background-image: linear-gradient(to bottom, #4a8051, #00d619);
+  text-decoration: none;
+}
+
+.duelInProgressButton {
+  -webkit-border-radius: 45;
+  -moz-border-radius: 45;
+  border-radius: 45px;
+  font-family: Georgia;
+  color: #d1d1d1;
+  font-size: 24px;
+  background: #808080;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.duelInProgressButton:hover {
+  background: #808080;
+  text-decoration: none;
 }
