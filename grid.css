@@ -1,0 +1,60 @@
+.battleArena {
+  background-color: grey;
+  display: grid;
+  grid-template-columns: 1fr 150px 150px 150px 150px 150px 150px 1fr;
+  grid-template-rows: 1fr 300px 150px 300px 1fr;
+  grid-template-areas: 
+    ". .    .    .    .    .    .    ."
+    ". info info info info info info ."
+    ". s1   s2   s3   s4   s5   s6   ."
+    ". aren aren aren aren aren aren ."
+    ". .    .    .    .    .    .    .";
+}
+
+.info {
+  background-color: yellow;
+  grid-area: info;
+}
+
+.s1 {
+  grid-area: s1;
+}
+
+.s2 {
+  grid-area: s2;
+}
+
+.s3 {
+  grid-area: s3;
+}
+
+.s4 {
+  grid-area: s4;
+}
+
+.s5 {
+  grid-area: s5;
+}
+
+.s6 {
+  grid-area: s6;
+}
+
+.aren {
+  grid-area: aren;
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas: 
+    "myHpArea . hisHpArea"
+    ".        . .        ";
+}
+
+.myHpArea {
+  grid-area: myHpArea;
+}
+
+.hisHpArea {
+  grid-area: hisHpArea;
+  float: right;
+}

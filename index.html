@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>StickDuel demo</title>
+  <link rel="stylesheet" type="text/css" href="grid.css">
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+<body>
+  <script src="myscripts.js"></script>
+  <div class="battleArena">
+    <div class="info">
+    </div>
+    <div class="s1">
+      <button id="a1" class="skill" onclick="toggleSkill('a1')"></button>
+    </div>
+    <div class="s2">
+      <button id="a2" class="skill" onclick="toggleSkill('a2')"></button>
+    </div>
+    <div class="s3">
+      <button id="a3" class="skill" onclick="toggleSkill('a3')"></button>
+    </div>
+    <div class="s4">
+      <button id="d1" class="skill" disabled onclick="toggleSkill('d1')"></button>
+    </div>
+    <div class="s5">
+      <button id="d2" class="skill" disabled onclick="toggleSkill('d2')"></button>
+    </div>
+    <div class="s6">
+      <button id="d3" class="skill" disabled onclick="toggleSkill('d3')"></button>
+    </div>
+    <div class="aren">
+      <div class="myHpArea">
+        Your Health: <div id="myHpId">40</div>
+        <div class="health-bar" id="my-health-bar">
+          <div class="bar" id="my-bar">
+              <div class="hit" id="my-hit"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hisHpArea">
+        Enemy Health: <div id="myHpId">40</div>
+        <div class="health-bar" id="my-health-bar">
+          <div class="bar" id="my-bar">
+              <div class="hit" id="my-hit"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
