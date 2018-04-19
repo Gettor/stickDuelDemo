@@ -17,6 +17,52 @@ const disabledSkills = [
     iconPrefix + "mysticDefDisabled.png"
 ];
 
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+function getSkillNumberById(skillId) {
+    switch(skillId) {
+        case "a1":
+            return 0;
+        case "a2":
+            return 1;
+        case "a3":
+            return 2;
+        case "d1":
+            return 3;
+        case "d2":
+            return 4;
+        case "d3":
+            return 5;
+        default:
+            return -1;
+    }
+}
+
+function getSkillNameById(skillId) {
+    if (!isNumber(skillId))
+    {
+        skillId = getSkillNumberById(skillId);
+    }
+    switch(skillId) {
+        case 0:
+            return "Strong Attack";
+        case 1:
+            return "Swift Attack";
+        case 2:
+            return "Mystic Attack";
+        case 3:
+            return "Strong Defence";
+        case 4:
+            return "Swift Defence";
+        case 5:
+            return "Mystic Defence";
+        default:
+            return -1;
+    }
+}
+
 function setBackgroundImages() {
     var skills = getSkills();
     for (var i = 0; i < skills.length; i++) {
@@ -66,7 +112,11 @@ function toggleSkill(skillId) {
 
     var info = document.getElementsByClassName("info")[0];
     var div = document.createElement("div");
-    div.innerHTML = "Hello " + skillId;
+    div.innerHTML = "Used " + getSkillNameById(skillId);
+
+    var otherSkill = Math.floor((Math.random() * 3) );
+
+    div.innerHTML += " versus " + getSkillNameById(otherSkill);
     info.appendChild(div);
     if (info.childNodes.length > 3)
     {
