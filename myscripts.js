@@ -63,6 +63,15 @@ function toggleSkill(skillId) {
     skills[4].disabled ^= true;
     skills[5].disabled ^= true;
     setBackgroundImages();
+
+    var info = document.getElementsByClassName("info")[0];
+    var div = document.createElement("div");
+    div.innerHTML = "Hello " + skillId;
+    info.appendChild(div);
+    if (info.childNodes.length > 3)
+    {
+        info.removeChild(info.childNodes[0]);
+    }
 }
 
 window.onload = function() {

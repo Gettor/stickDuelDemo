@@ -12,8 +12,10 @@
 }
 
 .info {
+  display: grid;
   background-color: yellow;
   grid-area: info;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 
