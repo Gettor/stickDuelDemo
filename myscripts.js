@@ -45,6 +45,8 @@ function manageInfos(skillId) {
     subInfos[1].innerHTML = subInfos[2].innerHTML;
 
     var otherSkill = Math.floor((Math.random() * 3) );
+    if (getSkillNumberById(skillId) < 3)
+        otherSkill += 3;
 
     var message = "Used " + getSkillNameById(skillId) + " versus " + getSkillNameById(otherSkill);
 

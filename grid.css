@@ -16,6 +16,11 @@
   background-color: yellow;
   grid-area: info;
   grid-template-rows: 1fr 1fr 1fr;
+  font-family: 'Anton', sans-serif;
+}
+
+.info div {
+
 }
 
 
@@ -56,6 +61,7 @@
   grid-template-areas: 
     "myHpArea . hisHpArea"
     ".        . .        ";
+  font-family: 'Oxygen', sans-serif;
 }
 
 .myHpArea {
@@ -64,5 +70,6 @@
 
 .hisHpArea {
   grid-area: hisHpArea;
-  float: right;
+  justify-self: end;
+  text-align: right;
 }
