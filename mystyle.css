@@ -44,3 +44,10 @@
   cursor: auto;
 }
 
+#info_two {
+  background-color: red;
+}
+
+.info-def {
+  text-align: right;
+}

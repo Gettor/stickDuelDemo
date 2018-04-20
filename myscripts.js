@@ -42,11 +42,25 @@ function manageInfos(skillId) {
     subInfos[2] = document.getElementById("info_three");
 
     subInfos[0].innerHTML = subInfos[1].innerHTML;
+    subInfos[0].className = subInfos[1].className;
+    subInfos[0].style.background = subInfos[1].style.background;
+
     subInfos[1].innerHTML = subInfos[2].innerHTML;
+    subInfos[1].className = subInfos[2].className;
+    subInfos[1].style.background = subInfos[2].style.background;
 
     var otherSkill = Math.floor((Math.random() * 3) );
     if (getSkillNumberById(skillId) < 3)
+    {
+        subInfos[2].className = "";
         otherSkill += 3;
+    }
+    else
+    {
+        subInfos[2].className = "info-def";
+    }
+    subInfos[2].style.background = getBackgroundGradient(skillId, otherSkill);
+    console.log("Aye macarena: " + getBackgroundGradient(skillId, otherSkill));
 
     var message = "Used " + getSkillNameById(skillId) + " versus " + getSkillNameById(otherSkill);
 

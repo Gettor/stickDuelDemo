@@ -16,13 +16,9 @@
   background-color: yellow;
   grid-area: info;
   grid-template-rows: 1fr 1fr 1fr;
+  align-content: end;
   font-family: 'Anton', sans-serif;
 }
-
-.info div {
-
-}
-
 
 .skill-wrapper {
   display: flex;

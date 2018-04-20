@@ -17,11 +17,21 @@ const disabledSkills = [
     iconPrefix + "mysticDefDisabled.png"
 ];
 
+const colors = [
+    "#ea6d44", // red
+    "#5bba64", // green
+    "#748ced"  // blue
+];
+
 function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
 function getSkillNumberById(skillId) {
+    if (isNumber(skillId))
+    {
+        return skillId;
+    }
     switch(skillId) {
         case "a1":
             return 0;
@@ -38,6 +48,13 @@ function getSkillNumberById(skillId) {
         default:
             return -1;
     }
+}
+
+function getBackgroundGradient(skillId, otherSkill)
+{
+    var left = getSkillNumberById(skillId) % 3;
+    var right = getSkillNumberById(otherSkill) % 3;
+    return "linear-gradient(to right, " + colors[left] + ", black, " + colors[right] + ")";
 }
 
 function getSkillNameById(skillId) {
