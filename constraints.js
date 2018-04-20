@@ -23,14 +23,6 @@ const infoColors = [
     "#748ced"  // blue
 ];
 
-const  maxHealth = 40;
-const  maxHealthWidth = 190;
-const  healthColors = [
-  "#3EC072FF",
-  "#BEAC40FF",
-  "#DE3020FF"
-];
-
 function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
