@@ -13,7 +13,7 @@
 
 .info {
   display: grid;
-  background-color: yellow;
+  background-color: #b7b7b7;
   grid-area: info;
   grid-template-rows: 1fr 1fr 1fr;
   align-content: end;

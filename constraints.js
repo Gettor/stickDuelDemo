@@ -17,10 +17,18 @@ const disabledSkills = [
     iconPrefix + "mysticDefDisabled.png"
 ];
 
-const colors = [
+const infoColors = [
     "#ea6d44", // red
     "#5bba64", // green
     "#748ced"  // blue
+];
+
+const  maxHealth = 40;
+const  maxHealthWidth = 190;
+const  healthColors = [
+  "#3EC072FF",
+  "#BEAC40FF",
+  "#DE3020FF"
 ];
 
 function isNumber(n) {
@@ -54,7 +62,7 @@ function getBackgroundGradient(skillId, otherSkill)
 {
     var left = getSkillNumberById(skillId) % 3;
     var right = getSkillNumberById(otherSkill) % 3;
-    return "linear-gradient(to right, " + colors[left] + ", black, " + colors[right] + ")";
+    return "linear-gradient(to right, " + infoColors[left] + ", #b7b7b7, " + infoColors[right] + ")";
 }
 
 function getSkillNameById(skillId) {
