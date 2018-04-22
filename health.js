@@ -10,9 +10,10 @@ function getRandomHit() {
   return maxHealth*(Math.floor(Math.random() * 8) + 1);
 }
 
-function onHit(barId) {
+function onHit(barId, hitValue) {
   var boxOne = document.getElementsByClassName('bar')[barId];
-  var step = getRandomHit();
+  var step = hitValue;
+  // var step = getRandomHit();
   var curWidth = boxOne.getAttribute("curValue") - step;
   if (curWidth < 0){
     curWidth = 0;
@@ -31,7 +32,11 @@ function onHit(barId) {
 
   var hpText = document.getElementsByClassName('healthText')[barId];
   hpText.innerHTML = Math.floor((percentage*maxHealth)).toString().concat("/").concat(maxHealth.toString());
+}
 
+function isDead(barId) {
+  var hpText = document.getElementsByClassName('healthText')[barId];
+  return hpText.innerHTML == ("0/" + maxHealth.toString()); 
 }
 
 function onReset(barId) {

@@ -63,6 +63,8 @@ function manageInfos(skillId) {
 
     var message = "Used " + getSkillNameById(skillId) + " versus " + getSkillNameById(otherSkill);
 
+    message += ". " + makeRoundWithDamageMessage(getSkillNumberById(skillId), otherSkill);
+
     subInfos[2].innerHTML = message;
 }
 
