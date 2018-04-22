@@ -11,6 +11,18 @@
   cursor: auto;
 }
 
+.small-skill {
+  background-size: 95px 95px;
+  height: 95px;
+  width: 95px;
+}
+
+#betweenSkills {
+  text-align: center;
+  margin: auto;
+  font-size: 3em;
+}
+
 .info-def {
   text-align: right;
 }

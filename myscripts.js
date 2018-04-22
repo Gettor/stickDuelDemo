@@ -35,6 +35,17 @@ function onClick() {
     startBtn[0].className = "duelInProgressButton";
 }
 
+function insertNewSkillImages(skillId, otherSkillId) {
+    var p_img = document.getElementById("mySkillImg");
+    var e_img = document.getElementById("hisSkillImg");
+    var between = document.getElementById("betweenSkills");
+    between.innerHTML = " VS ";
+    p_img.src = enabledSkills[skillId];
+    e_img.src = enabledSkills[otherSkillId];
+    // p_img.style.backgroundImage = "url(" + enabledSkills[skillId] + ")";
+    // e_img.style.backgroundImage = "url(" + enabledSkills[otherSkillId] + ")";
+}
+
 function manageInfos(skillId) {
     var subInfos = [];
     subInfos[0] = document.getElementById("info_one");
@@ -66,6 +77,7 @@ function manageInfos(skillId) {
     message += ". " + makeRoundWithDamageMessage(getSkillNumberById(skillId), otherSkill);
 
     subInfos[2].innerHTML = message;
+    insertNewSkillImages(getSkillNumberById(skillId), otherSkill);
 }
 
 function toggleSkill(skillId) {

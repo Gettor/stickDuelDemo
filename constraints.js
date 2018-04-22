@@ -68,13 +68,13 @@ function getSkillNameById(skillId) {
         case 1:
             return "Swift Attack";
         case 2:
-            return "Mystic Attack";
+            return "Magic Attack";
         case 3:
             return "Strong Defence";
         case 4:
             return "Swift Defence";
         case 5:
-            return "Mystic Defence";
+            return "Magic Defence";
         default:
             return -1;
     }
