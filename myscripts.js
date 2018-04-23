@@ -13,44 +13,27 @@ function setBackgroundImages() {
 }
 
 function getSkills() {
-    var a1 = document.getElementById("a1");
-    var a2 = document.getElementById("a2");
-    var a3 = document.getElementById("a3");
-    var d1 = document.getElementById("d1");
-    var d2 = document.getElementById("d2");
-    var d3 = document.getElementById("d3");
+    var a1 = document.querySelector("#a1");
+    var a2 = document.querySelector("#a2");
+    var a3 = document.querySelector("#a3");
+    var d1 = document.querySelector("#d1");
+    var d2 = document.querySelector("#d2");
+    var d3 = document.querySelector("#d3");
     return [a1, a2, a3, d1, d2, d3];
 }
 
-function onClick() {
-    var ph1 = document.getElementsByClassName("ph1");
-    var ph2 = document.getElementsByClassName("ph2");
-    var fight = document.getElementsByClassName("fight");
-    var startBtn = document.getElementsByClassName("startButton");
-
-    ph1[0].style.visibility = "visible";
-    ph2[0].style.visibility = "visible";
-    fight[0].style.visibility = "visible";
-    startBtn[0].disabled = true;
-    startBtn[0].className = "duelInProgressButton";
-}
-
 function insertNewSkillImages(skillId, otherSkillId) {
-    var p_img = document.getElementById("mySkillImg");
-    var e_img = document.getElementById("hisSkillImg");
-    var between = document.getElementById("betweenSkills");
-    between.innerHTML = " VS ";
+    var p_img = document.querySelector("#mySkillImg");
+    var e_img = document.querySelector("#hisSkillImg");
     p_img.src = enabledSkills[skillId];
     e_img.src = enabledSkills[otherSkillId];
-    // p_img.style.backgroundImage = "url(" + enabledSkills[skillId] + ")";
-    // e_img.style.backgroundImage = "url(" + enabledSkills[otherSkillId] + ")";
 }
 
 function manageInfos(skillId) {
     var subInfos = [];
-    subInfos[0] = document.getElementById("info_one");
-    subInfos[1] = document.getElementById("info_two");
-    subInfos[2] = document.getElementById("info_three");
+    subInfos[0] = document.querySelector("#info_one");
+    subInfos[1] = document.querySelector("#info_two");
+    subInfos[2] = document.querySelector("#info_three");
 
     subInfos[0].innerHTML = subInfos[1].innerHTML;
     subInfos[0].className = subInfos[1].className;
