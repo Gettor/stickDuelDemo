@@ -14,6 +14,18 @@ function getAttackTypeName (skillId) {
 	};
 }
 
+function playHitSound() {
+	var firstUrlPart = "sounds/hits/hit";
+	var secondUrlPart = ".mp3.flac";
+	var randomHit = Math.floor(Math.random() * 30) + 1;
+	if (randomHit < 10)
+		randomHit = "0" + randomHit.toString();
+	else
+		randomHit = randomHit.toString();
+	var x = new Audio(firstUrlPart + randomHit + secondUrlPart);
+	x.play();
+}
+
 function resolveFullyBlockedAttack(skillId) {
 	return "It dealt 0 " + getAttackTypeName(skillId) + "damage (10 blocked).";
 }
@@ -28,5 +40,6 @@ function makeRoundWithDamageMessage(skillId, otherSkillId) {
 	}
 	var message = "It dealt 10 " + getAttackTypeName(attacking_id) + "damage (0 blocked).";
 	onHit(active_idx, 10);
+	playHitSound();
 	return message;
 }

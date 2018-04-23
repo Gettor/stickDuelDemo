@@ -12,9 +12,8 @@
 }
 
 .small-skill {
-  background-size: 95px 95px;
-  height: 95px;
-  width: 95px;
+  background-size: 100px 100px;
+  height: 100px;
 }
 
 #betweenSkills {
@@ -58,4 +57,14 @@
 .reverse {
   top: 5px;
   right: 5px;
+}
+
+.reverse-img {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.player {
+  background-size: 300px 400px;
+  height: 400px;
 }
