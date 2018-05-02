@@ -40,6 +40,6 @@ function makeRoundWithDamageMessage(skillId, otherSkillId) {
 	}
 	var message = "It dealt 10 " + getAttackTypeName(attacking_id) + "damage (0 blocked).";
 	onHit(active_idx, 10);
-	playHitSound();
+	// playHitSound();
 	return message;
 }
